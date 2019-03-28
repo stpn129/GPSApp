@@ -3,4 +3,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Longitude">Широта</string>
+    <string name="Latitude">Долгота</string>
+    <string name="WhereIAm">Где я?</string>
+    <string name="LongitudeValue">0.0</string>
+    <string name="LatitudeValue">0.0</string>
+    <string name="Today">Сегодня</string>
+    <string name="SunRise">Восход</string>
+    <string name="SunSet">Закат</string>
+    <string name="SunRiseValue">0.0</string>
+    <string name="SunSetValue">0.0</string>
+    <string name="todo">TODO</string>
+    <string name="todo0">TODO</string>
 </resources>

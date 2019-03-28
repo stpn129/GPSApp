@@ -18,7 +18,7 @@ public class PagesAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case (0):
-                return new SunsetFragmen();
+                return new SunsetFragment();
             case (1):
                 return new MapFragment();
             default:
