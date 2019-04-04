@@ -6,7 +6,7 @@ import retrofit2.http.Query;
 
 public interface Api {
 
-    @GET
+    @GET("weather")
     Call<Results> getRes(@Query("lat") String lat, @Query("lon") String lon, @Query("APPID") String appId);
 
 }

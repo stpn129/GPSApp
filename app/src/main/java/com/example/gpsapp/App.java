@@ -23,7 +23,7 @@ public class App extends Application {
 
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://api.openweathermap.org")
+                .baseUrl("http://api.openweathermap.org/data/2.5/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(client)
                 .build();

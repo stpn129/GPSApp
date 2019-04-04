@@ -39,7 +39,9 @@ public class SunsetFragment extends Fragment {
     Context context;
     Api api;
     final String appId = "79b5dfcdb1b395ef747034e203e40427";
-    private TextView sunrise_value;
+    TextView sunset_tw;
+    TextView sunrise_tw;
+
 
     public SunsetFragment() {
         // Required empty public constructor
@@ -56,11 +58,12 @@ public class SunsetFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+       sunset_tw = view.findViewById(R.id.textView10);
+       sunrise_tw = view.findViewById(R.id.textView9);
         context = this.getContext();
         lat = view.findViewById(R.id.lat);
         lon = view.findViewById(R.id.lon);
         button = view.findViewById(R.id.button);
-        sunrise_value = view.findViewById(R.id.textView9);
 
         Application application = getActivity().getApplication();
         App app = (App) application;
@@ -79,6 +82,8 @@ public class SunsetFragment extends Fragment {
 
                     str_lon = valueOf(LocListener.getLocation(context,getActivity()).getLongitude());
                     lon.setText(str_lon);
+                    System.out.println(str_lat);
+                    System.out.println(str_lon);
                 }
 
                 Call<Results> call = api.getRes(str_lat,str_lon,appId);
@@ -89,6 +94,11 @@ public class SunsetFragment extends Fragment {
                         Sys sys = results.getSys();
                         String sunrise = new SimpleDateFormat("HH:mm").format(new Date(sys.getSunrise() * 1000));
                         String sunset = new SimpleDateFormat("HH:mm").format(new Date(sys.getSunset() * 1000));
+
+
+                        sunrise_tw.setText(sunrise);
+                        sunset_tw.setText(sunset);
+
 
 
 
